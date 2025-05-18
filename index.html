@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luiz Nelson | Portfólio</title>
+  <style>
+    :root {
+      --main-bg: #f5f6fa;
+      --card-bg: #fff;
+      --accent: #22223b;
+      --accent-soft: #4a4e69;
+      --text-main: #222;
+      --text-sec: #6b6b6b;
+      --shadow: 0 2px 12px rgba(40,40,40,0.06);
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--main-bg);
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 630px;
+      margin: 48px auto;
+      padding: 2rem 1rem 2.5rem 1rem;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0 0 0.2em 0;
+      letter-spacing: -1px;
+    }
+    h2 {
+      color: var(--accent-soft);
+      font-size: 1.17rem;
+      font-weight: 600;
+      margin: 2.1em 0 0.7em 0;
+      border-left: 4px solid var(--accent-soft);
+      padding-left: 0.5em;
+      background: none;
+    }
+    p {
+      color: var(--text-sec);
+      font-size: 1rem;
+      margin: 1em 0;
+      line-height: 1.7;
+    }
+    ul.projetos {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2em 0;
+      display: grid;
+      gap: 1.2em;
+    }
+    .projeto {
+      padding: 1em 1em;
+      background: #f7f7fb;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--accent-soft);
+      box-shadow: 0 1px 5px rgba(40,40,40,0.03);
+      transition: box-shadow 0.2s, border 0.2s;
+    }
+    .projeto-title {
+      font-weight: 600;
+      font-size: 1.08rem;
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .projeto-title:hover {
+      color: var(--accent-soft);
+    }
+    .projeto-desc {
+      font-size: 0.99rem;
+      color: #505050;
+      margin-top: 0.28em;
+    }
+    .contato {
+      display: flex;
+      gap: 1em;
+      margin-top: 1.4em;
+      flex-wrap: wrap;
+    }
+    .contato a {
+      color: var(--card-bg);
+      background: var(--accent-soft);
+      border-radius: 1em;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.45em 1.05em;
+      transition: background 0.18s;
+    }
+    .contato a:hover {
+      background: var(--accent);
+    }
+    @media (max-width: 550px) {
+      .container { padding: 1rem 0.3rem; }
+      h1 { font-size: 1.36rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Luiz Nelson</h1>
+    <p>
+      Graduando em Sistemas de Informação na UFPI.<br>
+      Interesse em análise de dados, inteligência artificial e automação. Atualmente participo de projetos de pesquisa em sistemas distribuídos e ciência de dados.
+    </p>
+    
+    <h2>Projetos</h2>
+    <ul class="projetos">
+      <li class="projeto">
+        <a class="projeto-title" href="https://github.com/luizznelson/ticket-routing" target="_blank">Roteamento Inteligente de Tickets</a>
+        <div class="projeto-desc">Classificação automática de tickets de suporte utilizando machine learning.</div>
+      </li>
+      <li class="projeto">
+        <a class="projeto-title" href="https://github.com/luizznelson/dashboard-tendencias-internet" target="_blank">Dashboard de Tendências da Internet</a>
+        <div class="projeto-desc">Visualização de tendências e análise de dados online.</div>
+      </li>
+      <li class="projeto">
+        <a class="projeto-title" href="https://github.com/luizznelson/sentiment-analysis" target="_blank">Análise de Sentimentos</a>
+        <div class="projeto-desc">Ferramenta para análise automática de sentimentos em textos.</div>
+      </li>
+    </ul>
+    
+    <h2>Contato</h2>
+    <div class="contato">
+      <a href="mailto:luizznelson.lima@gmail.com">E-mail</a>
+      <a href="https://linkedin.com/in/luizznelson" target="_blank">LinkedIn</a>
+      <a href="https://github.com/luizznelson" target="_blank">GitHub</a>
+    </div>
+    
+    <h2>Sobre</h2>
+    <p>
+      Experiência em análise de dados, programação em Python, automação de processos e pesquisa acadêmica.<br>
+      Buscando oportunidades para atuar com tecnologia e inovação.
+    </p>
+  </div>
+</body>
+</html>
