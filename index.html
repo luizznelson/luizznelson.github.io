@@ -6,14 +6,15 @@
   <title>Luiz Nelson | Portfólio</title>
   <style>
     :root {
-      --main-bg: #f5f6fa;
+      --main-bg: #f4f5f7;
       --card-bg: #fff;
       --accent: #22223b;
       --accent-soft: #4a4e69;
+      --highlight: #0077b6;
       --text-main: #222;
-      --text-sec: #6b6b6b;
-      --shadow: 0 2px 12px rgba(40,40,40,0.06);
-      --radius: 12px;
+      --text-sec: #555;
+      --shadow: 0 4px 14px rgba(0,0,0,0.05);
+      --radius: 14px;
     }
     * { box-sizing: border-box; }
     body {
@@ -24,87 +25,86 @@
       min-height: 100vh;
     }
     .container {
-      max-width: 630px;
-      margin: 48px auto;
-      padding: 2rem 1rem 2.5rem 1rem;
+      max-width: 720px;
+      margin: 60px auto;
+      padding: 2rem;
       background: var(--card-bg);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
     h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 700;
       color: var(--accent);
-      margin: 0 0 0.2em 0;
-      letter-spacing: -1px;
+      margin-bottom: 0.3em;
     }
     h2 {
       color: var(--accent-soft);
-      font-size: 1.17rem;
+      font-size: 1.3rem;
       font-weight: 600;
-      margin: 2.1em 0 0.7em 0;
-      border-left: 4px solid var(--accent-soft);
-      padding-left: 0.5em;
-      background: none;
+      margin: 2em 0 1em 0;
+      border-left: 4px solid var(--highlight);
+      padding-left: 0.6em;
     }
     p {
       color: var(--text-sec);
       font-size: 1rem;
-      margin: 1em 0;
       line-height: 1.7;
     }
     ul.projetos {
       list-style: none;
       padding: 0;
-      margin: 0 0 2em 0;
       display: grid;
-      gap: 1.2em;
+      gap: 1.4em;
     }
     .projeto {
-      padding: 1em 1em;
-      background: #f7f7fb;
+      padding: 1em;
+      background: #f8f9fb;
       border-radius: var(--radius);
-      border-left: 4px solid var(--accent-soft);
-      box-shadow: 0 1px 5px rgba(40,40,40,0.03);
-      transition: box-shadow 0.2s, border 0.2s;
+      border-left: 4px solid var(--highlight);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .projeto:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
     }
     .projeto-title {
       font-weight: 600;
-      font-size: 1.08rem;
+      font-size: 1.1rem;
       color: var(--accent);
       text-decoration: none;
-      transition: color 0.2s;
     }
     .projeto-title:hover {
-      color: var(--accent-soft);
+      color: var(--highlight);
     }
     .projeto-desc {
-      font-size: 0.99rem;
+      font-size: 0.95rem;
       color: #505050;
-      margin-top: 0.28em;
+      margin-top: 0.4em;
     }
     .contato {
       display: flex;
       gap: 1em;
-      margin-top: 1.4em;
+      margin-top: 1.2em;
       flex-wrap: wrap;
     }
     .contato a {
       color: var(--card-bg);
-      background: var(--accent-soft);
-      border-radius: 1em;
+      background: var(--highlight);
+      border-radius: 1.2em;
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
-      padding: 0.45em 1.05em;
-      transition: background 0.18s;
+      padding: 0.5em 1.2em;
+      transition: background 0.2s;
     }
     .contato a:hover {
-      background: var(--accent);
+      background: var(--accent-soft);
     }
     @media (max-width: 550px) {
-      .container { padding: 1rem 0.3rem; }
-      h1 { font-size: 1.36rem; }
+      .container { padding: 1.4rem; }
+      h1 { font-size: 1.7rem; }
     }
   </style>
 </head>
@@ -112,48 +112,48 @@
   <div class="container">
     <h1>Luiz Nelson</h1>
     <p>
-      Graduando em Sistemas de Informação na UFPI.<br>
-      Interesse em análise de dados, inteligência artificial e automação. Atualmente participo de projetos de pesquisa em sistemas distribuídos e ciência de dados.
+      Analista de Inovação e Inteligência na VirteX Telecom e Pesquisador no PASID/UFPI.<br>
+      Mestrando e Graduando em Sistemas de Informação na UFPI, com foco em Dados, Inteligência Artificial e Automação.<br>
+      Apaixonado por transformar dados em soluções inteligentes que geram impacto real.
     </p>
-    
-    <h2>Projetos</h2>
 
+    <h2>Projetos em Destaque</h2>
     <ul class="projetos">
       <li class="projeto">
         <a class="projeto-title" href="https://github.com/luizznelson/ticket-routing" target="_blank">Roteamento Inteligente de Tickets</a>
-        <div class="projeto-desc">Sistema que faz a triagem automática de tickets de suporte, utilizando machine learning para classificar solicitações e encaminhar cada demanda diretamente para a equipe ou setor mais adequado.</div>
+        <div class="projeto-desc">Sistema de triagem automática de tickets usando IA para otimizar o atendimento e acelerar processos.</div>
       </li>
       <li class="projeto">
         <a class="projeto-title" href="https://github.com/luizznelson/dashboard-tendencias-internet" target="_blank">Dashboard de Tendências da Internet</a>
-        <div class="projeto-desc">Plataforma interativa que coleta dados em tempo real de fontes online, analisa padrões de comportamento na web e apresenta visualizações dinâmicas para identificar tendências emergentes de forma clara e acessível.</div>
+        <div class="projeto-desc">Plataforma que monitora tendências online em tempo real, gerando insights estratégicos a partir de dados da web.</div>
       </li>
       <li class="projeto">
         <a class="projeto-title" href="https://github.com/luizznelson/sentiment-analysis" target="_blank">Análise de Sentimentos</a>
-        <div class="projeto-desc">Ferramenta de análise automática de sentimentos em textos de redes sociais e reviews, capaz de classificar opiniões como positivas, negativas ou neutras para ajudar empresas a monitorar a percepção do público.</div>
+        <div class="projeto-desc">Ferramenta de PLN para análise de sentimentos em textos e redes sociais, apoiando a tomada de decisões.</div>
       </li>
       <li class="projeto">
         <a class="projeto-title" href="https://github.com/luizznelson/chatbot-atendimento" target="_blank">Chatbot de Atendimento</a>
-        <div class="projeto-desc">Chatbot desenvolvido para automatizar o atendimento ao usuário, utilizando técnicas de processamento de linguagem natural para interpretar dúvidas, responder perguntas frequentes e agilizar o suporte em plataformas digitais.</div>
+        <div class="projeto-desc">Bot inteligente capaz de entender e responder perguntas frequentes, automatizando atendimentos via PLN.</div>
       </li>
       <li class="projeto">
         <a class="projeto-title" href="https://github.com/luizznelson/churn-prediction" target="_blank">Predição de Churn</a>
-        <div class="projeto-desc">Modelo preditivo que analisa históricos de clientes e identifica, por meio de algoritmos de machine learning, aqueles com maior risco de cancelamento, possibilitando ações preventivas de retenção.
+        <div class="projeto-desc">Modelo de machine learning que prevê clientes com risco de cancelamento, apoiando estratégias de retenção.</div>
       </li>
     </ul>
-    
+
     <h2>Contato</h2>
     <div class="contato">
       <a href="mailto:luizznelson.lima@gmail.com">E-mail</a>
       <a href="https://linkedin.com/in/luizznelson" target="_blank">LinkedIn</a>
       <a href="https://github.com/luizznelson" target="_blank">GitHub</a>
     </div>
-    
-    <h2>Sobre</h2>
+
+    <h2>Sobre Mim</h2>
     <p>
-      Graduando em Sistemas de Informação na UFPI, com atuação em pesquisa e projetos práticos nas áreas de ciência de dados, automação e inteligência artificial.<br>
-      Experiência em coleta e análise de dados, desenvolvimento de scripts em Python, visualização e automação de processos.<br>
-      Interesses em resolver problemas reais com tecnologia e aprendizado contínuo.<br>
-      Buscando novas oportunidades para aplicar e expandir meus conhecimentos em dados e inovação.
+      Atualmente sou Analista de Inovação e Inteligência na VirteX Telecom e pesquisador no PASID/UFPI.<br>
+      Minha atuação é focada no desenvolvimento de soluções inteligentes aplicando IA, ciência de dados e automação de processos.<br>
+      Tenho experiência prática em análise de dados, desenvolvimento de modelos preditivos, processamento de linguagem natural e construção de dashboards para geração de insights.<br>
+      Sou motivado por desafios que envolvem tecnologia, inovação e transformação digital.
     </p>
   </div>
 </body>
