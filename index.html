@@ -6,155 +6,214 @@
   <title>Luiz Nelson | Portfólio</title>
   <style>
     :root {
-      --main-bg: #f4f5f7;
-      --card-bg: #fff;
-      --accent: #22223b;
-      --accent-soft: #4a4e69;
-      --highlight: #0077b6;
-      --text-main: #222;
-      --text-sec: #555;
-      --shadow: 0 4px 14px rgba(0,0,0,0.05);
-      --radius: 14px;
+      --bg: #f4f5f7;
+      --surface: #ffffff;
+      --border: #e2e4e9;
+      --text: #1a1a1a;
+      --text-sec: #6b7280;
+      --text-ter: #9ca3af;
+      --accent: #0077b6;
+      --success-bg: #ecfdf5;
+      --success-text: #065f46;
+      --success-border: #a7f3d0;
+      --radius: 12px;
+      --radius-sm: 6px;
     }
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: var(--main-bg);
-      color: var(--text-main);
+      font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       min-height: 100vh;
+      padding: 2rem 1rem;
     }
-    .container {
-      max-width: 720px;
-      margin: 60px auto;
-      padding: 2rem;
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+    .wrap {
+      max-width: 680px;
+      margin: 0 auto;
     }
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 0.3em;
-    }
-    h2 {
-      color: var(--accent-soft);
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin: 2em 0 1em 0;
-      border-left: 4px solid var(--highlight);
-      padding-left: 0.6em;
-    }
-    p {
+    .header { padding: 2rem 0 1.5rem; }
+    .name { font-size: 1.5rem; font-weight: 600; }
+    .role {
+      font-size: 0.875rem;
       color: var(--text-sec);
-      font-size: 1rem;
-      line-height: 1.7;
+      margin-top: 4px;
+      line-height: 1.6;
     }
-    ul.projetos {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      gap: 1.4em;
+    .links { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+    .pill {
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      color: var(--text-sec);
+      background: var(--surface);
+      transition: border-color .15s, color .15s;
     }
-    .projeto {
-      padding: 1em;
-      background: #f8f9fb;
-      border-radius: var(--radius);
-      border-left: 4px solid var(--highlight);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-    .projeto:hover {
-      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-      transform: translateY(-2px);
-    }
-    .projeto-title {
+    .pill:hover { border-color: #9ca3af; color: var(--text); }
+    .divider { height: 1px; background: var(--border); margin: 1.75rem 0; }
+    .section-label {
+      font-size: 0.7rem;
       font-weight: 600;
-      font-size: 1.1rem;
-      color: var(--accent);
+      color: var(--text-ter);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .bio { font-size: 0.9rem; color: var(--text-sec); line-height: 1.75; }
+    .cards { display: grid; gap: 12px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
       text-decoration: none;
+      display: block;
+      transition: border-color .15s, box-shadow .15s;
     }
-    .projeto-title:hover {
-      color: var(--highlight);
+    .card:hover {
+      border-color: #9ca3af;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    .projeto-desc {
-      font-size: 0.95rem;
-      color: #505050;
-      margin-top: 0.4em;
-    }
-    .contato {
+    .card-top {
       display: flex;
-      gap: 1em;
-      margin-top: 1.2em;
-      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
     }
-    .contato a {
-      color: var(--card-bg);
-      background: var(--highlight);
-      border-radius: 1.2em;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-      padding: 0.5em 1.2em;
-      transition: background 0.2s;
+    .card-name { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+    .badge {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 20px;
+      white-space: nowrap;
+      background: var(--success-bg);
+      color: var(--success-text);
+      border: 1px solid var(--success-border);
+      flex-shrink: 0;
     }
-    .contato a:hover {
-      background: var(--accent-soft);
+    .card-desc {
+      font-size: 0.825rem;
+      color: var(--text-sec);
+      line-height: 1.65;
+      margin-top: 6px;
     }
-    @media (max-width: 550px) {
-      .container { padding: 1.4rem; }
-      h1 { font-size: 1.7rem; }
+    .card-tags { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+    .tag {
+      font-size: 0.7rem;
+      color: var(--text-ter);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .stack { display: flex; gap: 6px; flex-wrap: wrap; }
+    .stack-item {
+      font-size: 0.8rem;
+      color: var(--text-sec);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+    }
+    @media (max-width: 480px) {
+      .name { font-size: 1.25rem; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Luiz Nelson</h1>
-    <p>
-      Analista de Inovação e Inteligência na VirteX Telecom e Pesquisador no PASID/UFPI.<br>
-      Mestrando e Graduando em Sistemas de Informação na UFPI, com foco em Dados, Inteligência Artificial e Automação.<br>
-      Apaixonado por transformar dados em soluções inteligentes que geram impacto real.
-    </p>
+  <div class="wrap">
 
-    <h2>Projetos em Destaque</h2>
-    <ul class="projetos">
-      <li class="projeto">
-        <a class="projeto-title" href="https://github.com/luizznelson/ticket-routing" target="_blank">Roteamento Inteligente de Tickets</a>
-        <div class="projeto-desc">Sistema de triagem automática de tickets usando IA para otimizar o atendimento e acelerar processos.</div>
-      </li>
-      <li class="projeto">
-        <a class="projeto-title" href="https://github.com/luizznelson/dashboard-tendencias-internet" target="_blank">Dashboard de Tendências da Internet</a>
-        <div class="projeto-desc">Plataforma que monitora tendências online em tempo real, gerando insights estratégicos a partir de dados da web.</div>
-      </li>
-      <li class="projeto">
-        <a class="projeto-title" href="https://github.com/luizznelson/sentiment-analysis" target="_blank">Análise de Sentimentos</a>
-        <div class="projeto-desc">Ferramenta de PLN para análise de sentimentos em textos e redes sociais, apoiando a tomada de decisões.</div>
-      </li>
-      <li class="projeto">
-        <a class="projeto-title" href="https://github.com/luizznelson/chatbot-atendimento" target="_blank">Chatbot de Atendimento</a>
-        <div class="projeto-desc">Bot inteligente capaz de entender e responder perguntas frequentes, automatizando atendimentos via PLN.</div>
-      </li>
-      <li class="projeto">
-        <a class="projeto-title" href="https://github.com/luizznelson/churn-prediction" target="_blank">Predição de Churn</a>
-        <div class="projeto-desc">Modelo de machine learning que prevê clientes com risco de cancelamento, apoiando estratégias de retenção.</div>
-      </li>
-    </ul>
-
-    <h2>Contato</h2>
-    <div class="contato">
-      <a href="mailto:luizznelson.lima@gmail.com">E-mail</a>
-      <a href="https://linkedin.com/in/luizznelson" target="_blank">LinkedIn</a>
-      <a href="https://github.com/luizznelson" target="_blank">GitHub</a>
+    <div class="header">
+      <div class="name">Luiz Nelson dos Santos Lima</div>
+      <div class="role">
+        Analista de Inovação e Inteligência · VirteX Telecom<br>
+        Mestrando em Ciência da Computação · UFPI
+      </div>
+      <div class="links">
+        <a class="pill" href="https://linkedin.com/in/luiznelson" target="_blank">LinkedIn</a>
+        <a class="pill" href="https://github.com/luizznelson" target="_blank">GitHub</a>
+        <a class="pill" href="mailto:luizznelson.lima@gmail.com">E-mail</a>
+      </div>
     </div>
 
-    <h2>Sobre Mim</h2>
-    <p>
-      Atualmente sou Analista de Inovação e Inteligência na VirteX Telecom e pesquisador no PASID/UFPI.<br>
-      Minha atuação é focada no desenvolvimento de soluções inteligentes aplicando IA, ciência de dados e automação de processos.<br>
-      Tenho experiência prática em análise de dados, desenvolvimento de modelos preditivos, processamento de linguagem natural e construção de dashboards para geração de insights.<br>
-      Sou motivado por desafios que envolvem tecnologia, inovação e transformação digital.
+    <div class="divider"></div>
+
+    <div class="section-label">Sobre</div>
+    <p class="bio">
+      Trabalho com dados para transformar complexidade operacional em clareza — e clareza em decisão.
+      Desenvolvo automações e pipelines que conectam dados, sistemas e processos usando Python e GenAI aplicada ao contexto real do problema.
+      Pesquisador no PASID/UFPI com foco em sistemas distribuídos e +15 publicações em periódicos Qualis A1/A2.
+      Certificado em Lean Six Sigma.
     </p>
+
+    <div class="divider"></div>
+
+    <div class="section-label">Projetos</div>
+    <div class="cards">
+
+      <a class="card" href="https://ops-radar-b2kguj4mcnpgq78ybvsdxk.streamlit.app/" target="_blank">
+        <div class="card-top">
+          <span class="card-name">ops-radar — Olist Ops Intelligence</span>
+          <span class="badge">demo ao vivo</span>
+        </div>
+        <div class="card-desc">
+          Pipeline de inteligência operacional sobre 99 mil pedidos reais do e-commerce brasileiro.
+          Diagnóstico automático de atrasos, sumarização de reclamações com IA e relatório executivo
+          gerado sem intervenção humana.
+        </div>
+        <div class="card-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Groq</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">GenAI</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://github.com/luizznelson/churn-prediction" target="_blank">
+        <div class="card-top">
+          <span class="card-name">churn-prediction — Churn Ops Intelligence</span>
+        </div>
+        <div class="card-desc">
+          Pipeline de predição de cancelamento sobre 7.043 clientes reais (Kaggle Telco).
+          AUC-ROC 0.834, relatório executivo gerado por IA e assistente de retenção integrado.
+        </div>
+        <div class="card-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">Groq</span>
+          <span class="tag">Random Forest</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-label">Stack</div>
+    <div class="stack">
+      <span class="stack-item">Python</span>
+      <span class="stack-item">Pandas</span>
+      <span class="stack-item">Scikit-learn</span>
+      <span class="stack-item">Streamlit</span>
+      <span class="stack-item">SQL</span>
+      <span class="stack-item">Power BI</span>
+      <span class="stack-item">Docker</span>
+      <span class="stack-item">Hugging Face</span>
+      <span class="stack-item">LangChain</span>
+      <span class="stack-item">Groq</span>
+      <span class="stack-item">Gemini</span>
+      <span class="stack-item">Claude</span>
+      <span class="stack-item">ChatGPT</span>
+      <span class="stack-item">Git</span>
+      <span class="stack-item">Lean Six Sigma</span>
+      <span class="stack-item">Excel</span>
+    </div>
+
+    <div style="height: 3rem;"></div>
+
   </div>
 </body>
 </html>
