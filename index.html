@@ -3,260 +3,1146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Luiz Nelson | Portfólio</title>
+
+  <title>Luiz Nelson | Analista de Automação & Inteligência de Processos</title>
+
+  <meta
+    name="description"
+    content="Portfólio de Luiz Nelson — Automação de Processos, Dados & Analytics e IA Aplicada."
+  >
+
   <style>
     :root {
-      --bg: #f4f5f7;
+      --bg: #f5f6f8;
       --surface: #ffffff;
-      --border: #e2e4e9;
-      --text: #1a1a1a;
-      --text-sec: #6b7280;
-      --text-ter: #9ca3af;
-      --accent: #0077b6;
-      --success-bg: #ecfdf5;
-      --success-text: #065f46;
-      --success-border: #a7f3d0;
-      --radius: 12px;
-      --radius-sm: 6px;
+      --surface-soft: #f9fafb;
+
+      --border: #e4e7ec;
+      --border-strong: #d0d5dd;
+
+      --text: #101828;
+      --text-sec: #475467;
+      --text-ter: #98a2b3;
+
+      --accent: #175cd3;
+      --accent-soft: #eff4ff;
+      --accent-border: #b2ccff;
+
+      --success-bg: #ecfdf3;
+      --success-text: #027a48;
+      --success-border: #abefc6;
+
+      --radius: 14px;
+      --radius-sm: 7px;
+
+      --shadow:
+        0 1px 2px rgba(16, 24, 40, 0.03),
+        0 1px 3px rgba(16, 24, 40, 0.04);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
-      padding: 2rem 1rem;
+
+      padding: 2rem 1rem 4rem;
     }
+
     .wrap {
-      max-width: 680px;
+      max-width: 760px;
       margin: 0 auto;
     }
-    .header { padding: 2rem 0 1.5rem; }
-    .name { font-size: 1.5rem; font-weight: 600; }
-    .role {
-      font-size: 0.875rem;
-      color: var(--text-sec);
-      margin-top: 4px;
-      line-height: 1.6;
+
+    /* HEADER */
+
+    .header {
+      padding: 2.5rem 0 2rem;
     }
-    .links { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: clamp(1.75rem, 5vw, 2.35rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+    }
+
+    .role {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-sec);
+      margin-top: 10px;
+      line-height: 1.55;
+    }
+
+    .headline {
+      max-width: 650px;
+      margin-top: 18px;
+
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--text-sec);
+    }
+
+    .headline strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .links {
+      display: flex;
+      gap: 8px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
     .pill {
+      display: inline-flex;
+      align-items: center;
+
       font-size: 0.8rem;
-      padding: 4px 12px;
+      font-weight: 500;
+
+      padding: 6px 13px;
+
       border-radius: 20px;
       text-decoration: none;
+
       border: 1px solid var(--border);
       color: var(--text-sec);
       background: var(--surface);
-      transition: border-color .15s, color .15s;
+
+      transition:
+        border-color 0.15s,
+        color 0.15s,
+        transform 0.15s;
     }
-    .pill:hover { border-color: #9ca3af; color: var(--text); }
-    .divider { height: 1px; background: var(--border); margin: 1.75rem 0; }
+
+    .pill:hover {
+      border-color: var(--border-strong);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .pill.primary {
+      color: #ffffff;
+      background: var(--text);
+      border-color: var(--text);
+    }
+
+    /* GENERAL */
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 2rem 0;
+    }
+
     .section-label {
       font-size: 0.7rem;
-      font-weight: 600;
+      font-weight: 700;
+
       color: var(--text-ter);
-      letter-spacing: 0.08em;
+
+      letter-spacing: 0.09em;
       text-transform: uppercase;
-      margin-bottom: 14px;
+
+      margin-bottom: 16px;
     }
-    .bio { font-size: 0.9rem; color: var(--text-sec); line-height: 1.75; }
-    .cards { display: grid; gap: 12px; }
-    .card {
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 650;
+
+      letter-spacing: -0.015em;
+      margin-bottom: 8px;
+    }
+
+    .section-intro {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: var(--text-sec);
+
+      margin-bottom: 18px;
+    }
+
+    /* POSITIONING */
+
+    .problem-box {
       background: var(--surface);
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+      padding: 1.35rem 1.5rem;
+
+      box-shadow: var(--shadow);
+    }
+
+    .problem-box .question {
+      font-size: 0.72rem;
+
+      color: var(--text-ter);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .problem-box .answer {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.55;
+      color: var(--text);
+    }
+
+    .process-flow {
+      margin-top: 16px;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      align-items: center;
+      gap: 7px;
+
+      font-size: 0.73rem;
+      color: var(--text-sec);
+    }
+
+    .flow-item {
+      background: var(--surface-soft);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+
+      padding: 5px 9px;
+    }
+
+    .flow-arrow {
+      color: var(--text-ter);
+    }
+
+    /* THREE PILLARS */
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .pillar {
+      background: var(--surface);
+
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1rem 1.25rem;
-      text-decoration: none;
-      display: block;
-      transition: border-color .15s, box-shadow .15s;
+
+      padding: 1rem;
+
+      box-shadow: var(--shadow);
     }
+
+    .pillar-icon {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .pillar-title {
+      font-size: 0.87rem;
+      font-weight: 650;
+      margin-bottom: 6px;
+    }
+
+    .pillar-desc {
+      font-size: 0.78rem;
+      line-height: 1.6;
+      color: var(--text-sec);
+    }
+
+    /* EXPERIENCE */
+
+    .experience {
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      padding: 1.25rem 1.35rem;
+
+      box-shadow: var(--shadow);
+    }
+
+    .experience-head {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: flex-start;
+
+      gap: 12px;
+
+      margin-bottom: 15px;
+    }
+
+    .experience-company {
+      font-size: 0.95rem;
+      font-weight: 650;
+    }
+
+    .experience-role {
+      margin-top: 3px;
+
+      font-size: 0.78rem;
+      color: var(--text-sec);
+    }
+
+    .experience-date {
+      font-size: 0.72rem;
+      color: var(--text-ter);
+      white-space: nowrap;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 8px;
+
+      margin: 16px 0;
+    }
+
+    .metric {
+      background: var(--surface-soft);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+
+      padding: 10px;
+    }
+
+    .metric-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .metric-label {
+      margin-top: 3px;
+
+      font-size: 0.67rem;
+      line-height: 1.4;
+
+      color: var(--text-ter);
+    }
+
+    .experience-text {
+      font-size: 0.8rem;
+      color: var(--text-sec);
+      line-height: 1.7;
+    }
+
+    /* PROJECT */
+
+    .cards {
+      display: grid;
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      padding: 1.2rem 1.3rem;
+
+      box-shadow: var(--shadow);
+
+      transition:
+        border-color 0.15s,
+        box-shadow 0.15s,
+        transform 0.15s;
+    }
+
     .card:hover {
-      border-color: #9ca3af;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-color: var(--border-strong);
+
+      box-shadow:
+        0 3px 10px rgba(16, 24, 40, 0.06);
+
+      transform: translateY(-1px);
     }
+
     .card-top {
       display: flex;
+
       align-items: flex-start;
       justify-content: space-between;
-      gap: 8px;
+
+      gap: 10px;
     }
-    .card-name { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+
+    .card-name {
+      font-size: 0.95rem;
+      font-weight: 650;
+      color: var(--text);
+    }
+
     .badge {
-      font-size: 0.7rem;
-      padding: 2px 8px;
+      font-size: 0.68rem;
+
+      padding: 3px 8px;
+
       border-radius: 20px;
       white-space: nowrap;
+
       background: var(--success-bg);
       color: var(--success-text);
+
       border: 1px solid var(--success-border);
+
       flex-shrink: 0;
     }
+
+    .card-subtitle {
+      margin-top: 5px;
+
+      font-size: 0.76rem;
+      color: var(--accent);
+
+      font-weight: 600;
+    }
+
     .card-desc {
-      font-size: 0.825rem;
+      font-size: 0.82rem;
+
       color: var(--text-sec);
-      line-height: 1.65;
-      margin-top: 6px;
-    }
-    .card-main {
-      text-decoration: none;
-      display: block;
-      color: inherit;
-    }
-    
-    .card-links {
+
+      line-height: 1.7;
+
       margin-top: 10px;
     }
-    
-    .card-links a {
+
+    .card-tags {
+      display: flex;
+      gap: 6px;
+
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.69rem;
+
+      color: var(--text-sec);
+
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+
+      padding: 3px 8px;
+
+      border-radius: 5px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 14px;
+
+      margin-top: 14px;
+    }
+
+    .card-actions a {
       font-size: 0.75rem;
-      color: #0077b6;
+
+      color: var(--accent);
+
       text-decoration: none;
       font-weight: 600;
     }
-    
-    .card-links a:hover {
+
+    .card-actions a:hover {
       text-decoration: underline;
     }
-    .card-tags { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
-    .tag {
-      font-size: 0.7rem;
-      color: var(--text-ter);
-      background: var(--bg);
-      border: 1px solid var(--border);
-      padding: 2px 8px;
-      border-radius: 4px;
+
+    /* STACK */
+
+    .stack-group {
+      margin-bottom: 16px;
     }
-    .stack { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .stack-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .stack-title {
+      font-size: 0.76rem;
+      font-weight: 650;
+
+      color: var(--text);
+
+      margin-bottom: 7px;
+    }
+
+    .stack {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
     .stack-item {
-      font-size: 0.8rem;
+      font-size: 0.74rem;
+
       color: var(--text-sec);
+
       background: var(--surface);
       border: 1px solid var(--border);
-      padding: 3px 10px;
+
+      padding: 4px 9px;
+
       border-radius: var(--radius-sm);
     }
+
+    /* ACADEMIC */
+
+    .academic {
+      display: grid;
+      gap: 10px;
+    }
+
+    .academic-item {
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      padding: 1rem 1.2rem;
+    }
+
+    .academic-title {
+      font-size: 0.85rem;
+      font-weight: 650;
+    }
+
+    .academic-meta {
+      margin-top: 4px;
+
+      font-size: 0.74rem;
+      color: var(--text-ter);
+    }
+
+    .academic-desc {
+      margin-top: 7px;
+
+      font-size: 0.77rem;
+      color: var(--text-sec);
+
+      line-height: 1.65;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      padding-top: 2rem;
+
+      font-size: 0.73rem;
+      color: var(--text-ter);
+
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+
+      flex-wrap: wrap;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 650px) {
+      .pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-head {
+        flex-direction: column;
+      }
+    }
+
     @media (max-width: 480px) {
-      .name { font-size: 1.25rem; }
+      body {
+        padding: 1rem;
+      }
+
+      .header {
+        padding-top: 1.5rem;
+      }
+
+      .process-flow {
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
-<body>
-  <div class="wrap">
 
-    <div class="header">
-      <div class="name">Luiz Nelson dos Santos Lima</div>
+<body>
+
+  <main class="wrap">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+      <div class="eyebrow">
+        Automação · Dados · IA Aplicada
+      </div>
+
+      <h1 class="name">
+        Luiz Nelson dos Santos Lima
+      </h1>
+
       <div class="role">
-        Analista de Inovação e Inteligência · VirteX Telecom<br>
+        Analista de Automação & Inteligência de Processos<br>
         Mestrando em Ciência da Computação · UFPI
       </div>
+
+      <p class="headline">
+        Diagnostico <strong>problemas operacionais</strong> e construo soluções
+        com dados, automação e IA para tornar processos mais
+        <strong>eficientes, mensuráveis e inteligentes.</strong>
+      </p>
+
       <div class="links">
-        <a class="pill" href="https://linkedin.com/in/luiznelson" target="_blank">LinkedIn</a>
-        <a class="pill" href="https://github.com/luizznelson" target="_blank">GitHub</a>
-        <a class="pill" href="mailto:luizznelson.lima@gmail.com">E-mail</a>
+
+        <a
+          class="pill primary"
+          href="https://linkedin.com/in/luiznelson"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          class="pill"
+          href="https://github.com/luizznelson"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          class="pill"
+          href="mailto:luizznelsonpro@gmail.com"
+        >
+          E-mail
+        </a>
+
       </div>
-    </div>
+
+    </header>
+
+
+    <!-- PROBLEMA -->
 
     <div class="divider"></div>
 
-    <div class="section-label">Sobre</div>
-    <p class="bio">
-    Trabalho com dados para transformar complexidade operacional em clareza — e clareza em decisão.
-    Atuo estruturando métricas que refletem o que realmente acontece no negócio, identificando padrões que não aparecem em relatórios tradicionais e traduzindo análise em ação prática para quem precisa decidir.
-    Desenvolvo automações e pipelines que conectam dados, sistemas e processos, utilizando Python e GenAI aplicada ao contexto real dos problemas, com foco em melhoria contínua e eficiência operacional.
-    Tenho formação em Lean Six Sigma (White Belt), o que orienta minha visão sobre processos, identificação de gargalos e busca por melhorias baseadas em dados.
-    Sou graduado em Sistemas de Informação e atualmente mestrando em Ciência da Computação (UFPI), com foco em sistemas distribuídos — o que reforça meu rigor analítico e a preocupação em entender profundamente o problema antes de propor soluções.
-    Tenho interesse em inovação aplicada, onde dados, automação e visão de processo se combinam para gerar impacto real na operação.
-    </p>
+    <section>
 
-    <div class="divider"></div>
+      <div class="section-label">
+        O que eu resolvo
+      </div>
 
-    <div class="section-label">Projetos</div>
-    <div class="cards">
+      <div class="problem-box">
 
-        <div class="card">
-          
-          <a href="https://ops-radar-b2kguj4mcnpgq78ybvsdxk.streamlit.app/" target="_blank" class="card-main">
-            <div class="card-top">
-              <span class="card-name">ops-radar — Olist Ops Intelligence</span>
-              <span class="badge">demo ao vivo</span>
-            </div>
-        
-            <div class="card-desc">
-              Pipeline de inteligência operacional sobre 99 mil pedidos reais do e-commerce brasileiro.
-              Diagnóstico automático de atrasos, sumarização de reclamações com IA e relatório executivo
-              gerado sem intervenção humana.
-            </div>
-        
-            <div class="card-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Groq</span>
-              <span class="tag">Streamlit</span>
-              <span class="tag">GenAI</span>
-            </div>
-          </a>
-        
-          <div class="card-links">
-            <a href="https://github.com/luizznelson/ops-radar" target="_blank">Ver código</a>
-          </div>
-        
-        </div>
-  
-        <div class="card">
-          
-          <a href="https://churn-prediction-kw68vghhsd95yci7ppu5cj.streamlit.app/" target="_blank" class="card-main">
-            <div class="card-top">
-              <span class="card-name">churn-prediction — Churn Ops Intelligence</span>
-              <span class="badge">demo ao vivo</span>
-            </div>
-        
-            <div class="card-desc">
-              Pipeline de predição de cancelamento sobre 7.043 clientes reais (Kaggle Telco).
-              AUC-ROC 0.834, relatório executivo gerado por IA e assistente de retenção integrado.
-            </div>
-        
-            <div class="card-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Scikit-learn</span>
-              <span class="tag">Streamlit</span>
-              <span class="tag">Groq</span>
-              <span class="tag">Random Forest</span>
-            </div>
-          </a>
-        
-          <div class="card-links">
-            <a href="https://github.com/luizznelson/churn-prediction" target="_blank">Ver código</a>
-          </div>
-        
+        <div class="question">
+          Meu foco
         </div>
 
-    </div>
+        <div class="answer">
+          Transformar processos ineficientes, pouco mensuráveis
+          ou tecnologicamente mal resolvidos em operações mais
+          estruturadas e inteligentes.
+        </div>
+
+        <div class="process-flow">
+
+          <span class="flow-item">Problema</span>
+          <span class="flow-arrow">→</span>
+
+          <span class="flow-item">Diagnóstico</span>
+          <span class="flow-arrow">→</span>
+
+          <span class="flow-item">Dados</span>
+          <span class="flow-arrow">→</span>
+
+          <span class="flow-item">Solução</span>
+          <span class="flow-arrow">→</span>
+
+          <span class="flow-item">Implementação</span>
+          <span class="flow-arrow">→</span>
+
+          <span class="flow-item">Resultado</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COMO ATUO -->
 
     <div class="divider"></div>
 
-    <div class="section-label">Stack</div>
-    <div class="stack">
-      <span class="stack-item">Python</span>
-      <span class="stack-item">Pandas</span>
-      <span class="stack-item">Scikit-learn</span>
-      <span class="stack-item">Streamlit</span>
-      <span class="stack-item">SQL</span>
-      <span class="stack-item">Power BI</span>
-      <span class="stack-item">Docker</span>
-      <span class="stack-item">Hugging Face</span>
-      <span class="stack-item">LangChain</span>
-      <span class="stack-item">Groq</span>
-      <span class="stack-item">Gemini</span>
-      <span class="stack-item">Claude</span>
-      <span class="stack-item">ChatGPT</span>
-      <span class="stack-item">Git</span>
-      <span class="stack-item">Lean Six Sigma</span>
-      <span class="stack-item">Excel</span>
-    </div>
+    <section>
 
-    <div style="height: 3rem;"></div>
+      <div class="section-label">
+        Como eu atuo
+      </div>
 
-  </div>
+      <div class="pillars">
+
+        <div class="pillar">
+
+          <div class="pillar-icon">⚙️</div>
+
+          <div class="pillar-title">
+            Automação de Processos
+          </div>
+
+          <div class="pillar-desc">
+            Mapeamento AS-IS/TO-BE, levantamento de requisitos,
+            identificação de gargalos, integração entre sistemas
+            e automação de atividades operacionais.
+          </div>
+
+        </div>
+
+
+        <div class="pillar">
+
+          <div class="pillar-icon">📊</div>
+
+          <div class="pillar-title">
+            Dados & Analytics
+          </div>
+
+          <div class="pillar-desc">
+            Extração, tratamento e análise de dados,
+            criação de KPIs, dashboards e indicadores
+            para entender desempenho e apoiar decisões.
+          </div>
+
+        </div>
+
+
+        <div class="pillar">
+
+          <div class="pillar-icon">🧠</div>
+
+          <div class="pillar-title">
+            IA Aplicada
+          </div>
+
+          <div class="pillar-desc">
+            Uso de LLMs, LangChain, automações inteligentes
+            e Machine Learning quando o problema exige
+            interpretação, contexto ou inferência.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPERIÊNCIA -->
+
+    <div class="divider"></div>
+
+    <section>
+
+      <div class="section-label">
+        Experiência aplicada
+      </div>
+
+      <div class="experience">
+
+        <div class="experience-head">
+
+          <div>
+
+            <div class="experience-company">
+              VirteX Telecom
+            </div>
+
+            <div class="experience-role">
+              Analista de Inovação e Inteligência — Processos & Qualidade
+            </div>
+
+          </div>
+
+          <div class="experience-date">
+            2025 — 2026
+          </div>
+
+        </div>
+
+
+        <div class="metrics">
+
+          <div class="metric">
+
+            <div class="metric-value">
+              3.000+
+            </div>
+
+            <div class="metric-label">
+              protocolos/mês em processo automatizado
+            </div>
+
+          </div>
+
+
+          <div class="metric">
+
+            <div class="metric-value">
+              12 → 1 min
+            </div>
+
+            <div class="metric-label">
+              redução aproximada do tempo por protocolo
+            </div>
+
+          </div>
+
+
+          <div class="metric">
+
+            <div class="metric-value">
+              ROI &gt; 1.000%
+            </div>
+
+            <div class="metric-label">
+              estimado no primeiro ano
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <p class="experience-text">
+          Atuação desde o entendimento do problema e levantamento de requisitos
+          até desenho, implementação, homologação e análise dos resultados.
+          Desenvolvimento de automações em Python, integrações via APIs REST,
+          consultas SQL, dashboards em Power BI e solução corporativa com
+          LLM + LangChain para consulta de informações sobre processos internos.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROJETO -->
+
+    <div class="divider"></div>
+
+    <section>
+
+      <div class="section-label">
+        Projeto em destaque
+      </div>
+
+      <div class="cards">
+
+        <article class="card">
+
+          <div class="card-top">
+
+            <span class="card-name">
+              Industrial Hydraulic DataOps
+            </span>
+
+            <span class="badge">
+              projeto
+            </span>
+
+          </div>
+
+
+          <div class="card-subtitle">
+            Da telemetria bruta à informação analítica
+          </div>
+
+
+          <div class="card-desc">
+            Pipeline desenvolvido sobre dados experimentais reais
+            de um sistema hidráulico com 2.205 ciclos operacionais.
+
+            O projeto transforma sinais de pressão, potência, vazão,
+            temperatura e vibração coletados em diferentes frequências
+            em uma camada estruturada e validada para análise.
+          </div>
+
+
+          <div class="card-tags">
+
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Data Quality</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Plotly</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Pytest</span>
+
+          </div>
+
+
+          <div class="card-actions">
+
+            <a
+              href="https://github.com/luizznelson/industrial-hydraulic-dataops"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver código →
+            </a>
+
+            <!--
+              SUBSTITUA PELO LINK REAL QUANDO O STREAMLIT ESTIVER PUBLICADO
+            -->
+
+            <a
+              href="SEU_LINK_STREAMLIT"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir dashboard →
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- STACK -->
+
+    <div class="divider"></div>
+
+    <section>
+
+      <div class="section-label">
+        Stack & Competências
+      </div>
+
+
+      <div class="stack-group">
+
+        <div class="stack-title">
+          Automação & Processos
+        </div>
+
+        <div class="stack">
+
+          <span class="stack-item">Python</span>
+          <span class="stack-item">REST APIs</span>
+          <span class="stack-item">n8n</span>
+          <span class="stack-item">BPMN</span>
+          <span class="stack-item">OAuth</span>
+          <span class="stack-item">Requirements Analysis</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="stack-group">
+
+        <div class="stack-title">
+          Dados & Analytics
+        </div>
+
+        <div class="stack">
+
+          <span class="stack-item">Pandas</span>
+          <span class="stack-item">SQL</span>
+          <span class="stack-item">Power BI</span>
+          <span class="stack-item">Power Query</span>
+          <span class="stack-item">DAX</span>
+          <span class="stack-item">Excel</span>
+          <span class="stack-item">Estatística</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="stack-group">
+
+        <div class="stack-title">
+          IA Aplicada
+        </div>
+
+        <div class="stack">
+
+          <span class="stack-item">LLMs</span>
+          <span class="stack-item">LangChain</span>
+          <span class="stack-item">LangGraph</span>
+          <span class="stack-item">RAG</span>
+          <span class="stack-item">Prompt Engineering</span>
+          <span class="stack-item">Scikit-learn</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="stack-group">
+
+        <div class="stack-title">
+          Engenharia
+        </div>
+
+        <div class="stack">
+
+          <span class="stack-item">Git</span>
+          <span class="stack-item">Docker</span>
+          <span class="stack-item">FastAPI</span>
+          <span class="stack-item">SQLite</span>
+          <span class="stack-item">PostgreSQL</span>
+          <span class="stack-item">Airflow</span>
+          <span class="stack-item">Pytest</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FORMAÇÃO / PESQUISA -->
+
+    <div class="divider"></div>
+
+    <section>
+
+      <div class="section-label">
+        Formação, Docência & Pesquisa
+      </div>
+
+      <div class="academic">
+
+
+        <div class="academic-item">
+
+          <div class="academic-title">
+            Mestrado em Ciência da Computação
+          </div>
+
+          <div class="academic-meta">
+            UFPI · Sistemas Distribuídos · 2025 — 2028
+          </div>
+
+        </div>
+
+
+        <div class="academic-item">
+
+          <div class="academic-title">
+            Estágio em Docência — Estatística
+          </div>
+
+          <div class="academic-meta">
+            Universidade Federal do Piauí · 2026
+          </div>
+
+          <div class="academic-desc">
+            Correlação, Regressão Linear, ANOVA e
+            Delineamento de Experimentos, com foco em
+            interpretação e comunicação de resultados.
+          </div>
+
+        </div>
+
+
+        <div class="academic-item">
+
+          <div class="academic-title">
+            Pesquisador — PASID / UFPI
+          </div>
+
+          <div class="academic-meta">
+            2022 — atual
+          </div>
+
+          <div class="academic-desc">
+            Pesquisa em sistemas distribuídos, IoT/LoRaWAN,
+            redes de sensores, telemetria, modelagem e
+            avaliação de desempenho.
+
+            <strong>
+              20+ publicações científicas
+            </strong>
+            em periódicos e conferências.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+      <span>
+        Luiz Nelson dos Santos Lima
+      </span>
+
+      <span>
+        Automação · Dados · IA Aplicada
+      </span>
+
+    </footer>
+
+  </main>
+
 </body>
 </html>
