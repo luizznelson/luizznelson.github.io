@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Luiz Nelson | Analista de Automação & Inteligência de Processos</title>
+  <title>Luiz Nelson | Automação, Dados & IA Aplicada</title>
 
   <meta
     name="description"
-    content="Portfólio de Luiz Nelson — Automação de Processos, Dados & Analytics e IA Aplicada."
+    content="Portfólio de Luiz Nelson dos Santos Lima — Automação de Processos, Dados & Analytics e IA Aplicada."
   >
 
   <style>
@@ -62,19 +62,57 @@
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
+      padding: 1.25rem 1rem 4rem;
+    }
 
-      padding: 2rem 1rem 4rem;
+    a {
+      color: inherit;
     }
 
     .wrap {
-      max-width: 760px;
+      max-width: 980px;
       margin: 0 auto;
+    }
+
+    /* NAV */
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 0.75rem 0 0;
+    }
+
+    .nav-brand {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text-sec);
+      text-decoration: none;
+      font-size: 0.76rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
     }
 
     /* HEADER */
 
     .header {
-      padding: 2.5rem 0 2rem;
+      padding: 4.5rem 0 3rem;
+      max-width: 760px;
     }
 
     .eyebrow {
@@ -87,26 +125,25 @@
     }
 
     .name {
-      font-size: clamp(1.75rem, 5vw, 2.35rem);
-      font-weight: 700;
-      letter-spacing: -0.035em;
-      line-height: 1.15;
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 720;
+      letter-spacing: -0.045em;
+      line-height: 1.08;
     }
 
     .role {
-      font-size: 1rem;
+      font-size: 1.04rem;
       font-weight: 500;
       color: var(--text-sec);
-      margin-top: 10px;
+      margin-top: 14px;
       line-height: 1.55;
     }
 
     .headline {
-      max-width: 650px;
-      margin-top: 18px;
-
-      font-size: 0.95rem;
-      line-height: 1.75;
+      max-width: 680px;
+      margin-top: 20px;
+      font-size: 0.98rem;
+      line-height: 1.8;
       color: var(--text-sec);
     }
 
@@ -118,26 +155,21 @@
     .links {
       display: flex;
       gap: 8px;
-      margin-top: 20px;
+      margin-top: 24px;
       flex-wrap: wrap;
     }
 
     .pill {
       display: inline-flex;
       align-items: center;
-
       font-size: 0.8rem;
       font-weight: 500;
-
-      padding: 6px 13px;
-
+      padding: 7px 14px;
       border-radius: 20px;
       text-decoration: none;
-
       border: 1px solid var(--border);
       color: var(--text-sec);
       background: var(--surface);
-
       transition:
         border-color 0.15s,
         color 0.15s,
@@ -161,35 +193,35 @@
     .divider {
       height: 1px;
       background: var(--border);
-      margin: 2rem 0;
+      margin: 2.5rem 0;
+    }
+
+    .section {
+      scroll-margin-top: 24px;
     }
 
     .section-label {
       font-size: 0.7rem;
       font-weight: 700;
-
       color: var(--text-ter);
-
       letter-spacing: 0.09em;
       text-transform: uppercase;
-
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
 
     .section-title {
-      font-size: 1.15rem;
-      font-weight: 650;
-
-      letter-spacing: -0.015em;
+      font-size: clamp(1.3rem, 3vw, 1.65rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
       margin-bottom: 8px;
     }
 
     .section-intro {
+      max-width: 690px;
       font-size: 0.875rem;
-      line-height: 1.7;
+      line-height: 1.75;
       color: var(--text-sec);
-
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
     /* POSITIONING */
@@ -197,50 +229,42 @@
     .problem-box {
       background: var(--surface);
       border: 1px solid var(--border);
-
       border-radius: var(--radius);
-      padding: 1.35rem 1.5rem;
-
+      padding: 1.5rem 1.6rem;
       box-shadow: var(--shadow);
     }
 
     .problem-box .question {
       font-size: 0.72rem;
-
       color: var(--text-ter);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-
       font-weight: 700;
       margin-bottom: 8px;
     }
 
     .problem-box .answer {
-      font-size: 1rem;
+      max-width: 760px;
+      font-size: 1.04rem;
       font-weight: 600;
       line-height: 1.55;
       color: var(--text);
     }
 
     .process-flow {
-      margin-top: 16px;
-
+      margin-top: 18px;
       display: flex;
       flex-wrap: wrap;
-
       align-items: center;
       gap: 7px;
-
       font-size: 0.73rem;
       color: var(--text-sec);
     }
 
     .flow-item {
       background: var(--surface-soft);
-
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
-
       padding: 5px 9px;
     }
 
@@ -252,18 +276,15 @@
 
     .pillars {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
     }
 
     .pillar {
       background: var(--surface);
-
       border: 1px solid var(--border);
       border-radius: var(--radius);
-
-      padding: 1rem;
-
+      padding: 1.15rem;
       box-shadow: var(--shadow);
     }
 
@@ -273,14 +294,14 @@
     }
 
     .pillar-title {
-      font-size: 0.87rem;
+      font-size: 0.9rem;
       font-weight: 650;
-      margin-bottom: 6px;
+      margin-bottom: 7px;
     }
 
     .pillar-desc {
-      font-size: 0.78rem;
-      line-height: 1.6;
+      font-size: 0.79rem;
+      line-height: 1.65;
       color: var(--text-sec);
     }
 
@@ -288,35 +309,28 @@
 
     .experience {
       background: var(--surface);
-
       border: 1px solid var(--border);
       border-radius: var(--radius);
-
-      padding: 1.25rem 1.35rem;
-
+      padding: 1.4rem 1.5rem;
       box-shadow: var(--shadow);
     }
 
     .experience-head {
       display: flex;
-
       justify-content: space-between;
       align-items: flex-start;
-
       gap: 12px;
-
       margin-bottom: 15px;
     }
 
     .experience-company {
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 650;
     }
 
     .experience-role {
-      margin-top: 3px;
-
-      font-size: 0.78rem;
+      margin-top: 4px;
+      font-size: 0.79rem;
       color: var(--text-sec);
     }
 
@@ -329,59 +343,51 @@
     .metrics {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-
       gap: 8px;
-
-      margin: 16px 0;
+      margin: 18px 0;
     }
 
     .metric {
       background: var(--surface-soft);
-
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
-
-      padding: 10px;
+      padding: 11px;
     }
 
     .metric-value {
-      font-size: 1rem;
+      font-size: 1.02rem;
       font-weight: 700;
       color: var(--text);
     }
 
     .metric-label {
       margin-top: 3px;
-
-      font-size: 0.67rem;
-      line-height: 1.4;
-
+      font-size: 0.68rem;
+      line-height: 1.45;
       color: var(--text-ter);
     }
 
     .experience-text {
-      font-size: 0.8rem;
+      font-size: 0.81rem;
       color: var(--text-sec);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
-    /* PROJECT */
+    /* PROJECTS */
 
-    .cards {
+    .projects-grid {
       display: grid;
-      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
     }
 
     .card {
+      min-width: 0;
       background: var(--surface);
-
       border: 1px solid var(--border);
       border-radius: var(--radius);
-
-      padding: 1.2rem 1.3rem;
-
+      padding: 1.3rem 1.35rem;
       box-shadow: var(--shadow);
-
       transition:
         border-color 0.15s,
         box-shadow 0.15s,
@@ -390,96 +396,104 @@
 
     .card:hover {
       border-color: var(--border-strong);
-
-      box-shadow:
-        0 3px 10px rgba(16, 24, 40, 0.06);
-
+      box-shadow: 0 4px 14px rgba(16, 24, 40, 0.06);
       transform: translateY(-1px);
     }
 
     .card-top {
       display: flex;
-
       align-items: flex-start;
       justify-content: space-between;
-
       gap: 10px;
     }
 
     .card-name {
-      font-size: 0.95rem;
-      font-weight: 650;
+      font-size: 1rem;
+      font-weight: 700;
       color: var(--text);
+      line-height: 1.35;
     }
 
     .badge {
-      font-size: 0.68rem;
-
+      font-size: 0.67rem;
       padding: 3px 8px;
-
       border-radius: 20px;
       white-space: nowrap;
-
       background: var(--success-bg);
       color: var(--success-text);
-
       border: 1px solid var(--success-border);
-
       flex-shrink: 0;
     }
 
     .card-subtitle {
-      margin-top: 5px;
-
+      margin-top: 7px;
       font-size: 0.76rem;
       color: var(--accent);
-
       font-weight: 600;
+      line-height: 1.45;
     }
 
     .card-desc {
-      font-size: 0.82rem;
-
+      font-size: 0.81rem;
       color: var(--text-sec);
-
       line-height: 1.7;
+      margin-top: 12px;
+    }
 
-      margin-top: 10px;
+    .card-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .card-metric {
+      padding: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      border-radius: var(--radius-sm);
+    }
+
+    .card-metric strong {
+      display: block;
+      font-size: 0.82rem;
+      line-height: 1.2;
+    }
+
+    .card-metric span {
+      display: block;
+      margin-top: 3px;
+      color: var(--text-ter);
+      font-size: 0.62rem;
+      line-height: 1.35;
     }
 
     .card-tags {
       display: flex;
       gap: 6px;
-
-      margin-top: 12px;
+      margin-top: 14px;
       flex-wrap: wrap;
     }
 
     .tag {
-      font-size: 0.69rem;
-
+      font-size: 0.68rem;
       color: var(--text-sec);
-
       background: var(--surface-soft);
       border: 1px solid var(--border);
-
       padding: 3px 8px;
-
       border-radius: 5px;
     }
 
     .card-actions {
       display: flex;
       gap: 14px;
-
-      margin-top: 14px;
+      margin-top: 16px;
+      flex-wrap: wrap;
     }
 
     .card-actions a {
       font-size: 0.75rem;
-
       color: var(--accent);
-
       text-decoration: none;
       font-weight: 600;
     }
@@ -490,21 +504,21 @@
 
     /* STACK */
 
-    .stack-group {
-      margin-bottom: 16px;
+    .stack-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 28px;
     }
 
-    .stack-group:last-child {
-      margin-bottom: 0;
+    .stack-group {
+      min-width: 0;
     }
 
     .stack-title {
       font-size: 0.76rem;
       font-weight: 650;
-
       color: var(--text);
-
-      margin-bottom: 7px;
+      margin-bottom: 8px;
     }
 
     .stack {
@@ -514,15 +528,11 @@
     }
 
     .stack-item {
-      font-size: 0.74rem;
-
+      font-size: 0.73rem;
       color: var(--text-sec);
-
       background: var(--surface);
       border: 1px solid var(--border);
-
       padding: 4px 9px;
-
       border-radius: var(--radius-sm);
     }
 
@@ -530,36 +540,35 @@
 
     .academic {
       display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
     }
 
     .academic-item {
+      min-width: 0;
       background: var(--surface);
-
       border: 1px solid var(--border);
       border-radius: var(--radius);
-
-      padding: 1rem 1.2rem;
+      padding: 1rem 1.1rem;
     }
 
     .academic-title {
       font-size: 0.85rem;
       font-weight: 650;
+      line-height: 1.45;
     }
 
     .academic-meta {
-      margin-top: 4px;
-
-      font-size: 0.74rem;
+      margin-top: 5px;
+      font-size: 0.72rem;
       color: var(--text-ter);
+      line-height: 1.45;
     }
 
     .academic-desc {
-      margin-top: 7px;
-
-      font-size: 0.77rem;
+      margin-top: 8px;
+      font-size: 0.76rem;
       color: var(--text-sec);
-
       line-height: 1.65;
     }
 
@@ -567,30 +576,42 @@
 
     .footer {
       padding-top: 2rem;
-
       font-size: 0.73rem;
       color: var(--text-ter);
-
       display: flex;
       justify-content: space-between;
       gap: 10px;
-
       flex-wrap: wrap;
     }
 
     /* MOBILE */
 
-    @media (max-width: 650px) {
-      .pillars {
+    @media (max-width: 780px) {
+      .projects-grid,
+      .academic,
+      .stack-columns {
         grid-template-columns: 1fr;
       }
+    }
 
-      .metrics {
+    @media (max-width: 650px) {
+      .pillars,
+      .metrics,
+      .card-metrics {
         grid-template-columns: 1fr;
       }
 
       .experience-head {
         flex-direction: column;
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 10px 14px;
+        justify-content: flex-end;
       }
     }
 
@@ -600,7 +621,15 @@
       }
 
       .header {
-        padding-top: 1.5rem;
+        padding-top: 3rem;
+      }
+
+      .nav {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
       }
 
       .process-flow {
@@ -613,6 +642,18 @@
 <body>
 
   <main class="wrap">
+
+    <nav class="nav" aria-label="Navegação principal">
+      <div class="nav-brand">Luiz Nelson</div>
+
+      <div class="nav-links">
+        <a href="#atuacao">Atuação</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#stack">Stack</a>
+        <a href="#formacao">Formação</a>
+      </div>
+    </nav>
 
     <!-- HEADER -->
 
@@ -673,7 +714,7 @@
 
     <div class="divider"></div>
 
-    <section>
+    <section class="section">
 
       <div class="section-label">
         O que eu resolvo
@@ -721,11 +762,20 @@
 
     <div class="divider"></div>
 
-    <section>
+    <section class="section" id="atuacao">
 
       <div class="section-label">
         Como eu atuo
       </div>
+
+      <h2 class="section-title">
+        Três frentes que se conectam
+      </h2>
+
+      <p class="section-intro">
+        O problema define a ferramenta. A atuação combina processos, dados e IA
+        conforme a necessidade da operação, sem tratar tecnologia como ponto de partida.
+      </p>
 
       <div class="pillars">
 
@@ -772,12 +822,196 @@
           </div>
 
           <div class="pillar-desc">
-            Uso de LLMs, LangChain, automações inteligentes
-            e Machine Learning quando o problema exige
-            interpretação, contexto ou inferência.
+            Uso de LLMs, LangChain, RAG e Machine Learning
+            quando o problema exige interpretação, contexto
+            ou análise que regras determinísticas não resolvem bem.
           </div>
 
         </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROJETOS -->
+
+    <div class="divider"></div>
+
+    <section class="section" id="projetos">
+
+      <div class="section-label">
+        Projetos em destaque
+      </div>
+
+      <h2 class="section-title">
+        Engenharia aplicada a problemas reais
+      </h2>
+
+      <p class="section-intro">
+        Dois cases que mostram o ciclo completo: definição do problema,
+        arquitetura, dados, implementação, validação e comunicação do resultado.
+      </p>
+
+      <div class="projects-grid">
+
+        <!-- COMPETITIVE INTELLIGENCE -->
+
+        <article class="card">
+
+          <div class="card-top">
+
+            <span class="card-name">
+              Competitive Intelligence Agent
+            </span>
+
+            <span class="badge">
+              live
+            </span>
+
+          </div>
+
+          <div class="card-subtitle">
+            Da coleta de preços públicos à inteligência competitiva
+          </div>
+
+          <div class="card-desc">
+            Sistema que substitui o monitoramento manual de concorrentes
+            por uma rotina estruturada e rastreável. Coleta preço e
+            disponibilidade, preserva histórico real, calcula indicadores
+            determinísticos e disponibiliza os resultados em dashboard e
+            para um Analista de IA conectado por MCP.
+          </div>
+
+          <div class="card-metrics">
+
+            <div class="card-metric">
+              <strong>100</strong>
+              <span>produtos canônicos</span>
+            </div>
+
+            <div class="card-metric">
+              <strong>225</strong>
+              <span>ofertas ativas</span>
+            </div>
+
+            <div class="card-metric">
+              <strong>3</strong>
+              <span>fontes principais</span>
+            </div>
+
+          </div>
+
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">MCP</span>
+            <span class="tag">Groq</span>
+            <span class="tag">Docker</span>
+          </div>
+
+          <div class="card-actions">
+
+            <a
+              href="https://github.com/luizznelson/competitive-intelligence-agent"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver código →
+            </a>
+
+            <a
+              href="https://competitive-intelligence-agent.streamlit.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir demo →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- INDUSTRIAL DATAOPS -->
+
+        <article class="card">
+
+          <div class="card-top">
+
+            <span class="card-name">
+              Industrial Hydraulic DataOps
+            </span>
+
+            <span class="badge">
+              live
+            </span>
+
+          </div>
+
+          <div class="card-subtitle">
+            Da telemetria bruta à informação analítica
+          </div>
+
+          <div class="card-desc">
+            Pipeline sobre dados experimentais reais de um sistema hidráulico.
+            Harmoniza sensores coletados em diferentes frequências, valida a
+            qualidade da base, cria features por ciclo operacional e entrega
+            uma camada comparável para analytics e investigação.
+          </div>
+
+          <div class="card-metrics">
+
+            <div class="card-metric">
+              <strong>2.205</strong>
+              <span>ciclos operacionais</span>
+            </div>
+
+            <div class="card-metric">
+              <strong>12</strong>
+              <span>sensores processados</span>
+            </div>
+
+            <div class="card-metric">
+              <strong>30M+</strong>
+              <span>medições avaliadas</span>
+            </div>
+
+          </div>
+
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Data Quality</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Plotly</span>
+            <span class="tag">Docker</span>
+          </div>
+
+          <div class="card-actions">
+
+            <a
+              href="https://github.com/luizznelson/industrial-hydraulic-dataops"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver código →
+            </a>
+
+            <a
+              href="https://industrial-hydraulic-dataops.streamlit.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir dashboard →
+            </a>
+
+          </div>
+
+        </article>
 
       </div>
 
@@ -788,11 +1022,15 @@
 
     <div class="divider"></div>
 
-    <section>
+    <section class="section" id="experiencia">
 
       <div class="section-label">
         Experiência aplicada
       </div>
+
+      <h2 class="section-title">
+        Inovação & Inteligência em operação
+      </h2>
 
       <div class="experience">
 
@@ -873,180 +1111,94 @@
     </section>
 
 
-    <!-- PROJETO -->
-
-    <div class="divider"></div>
-
-    <section>
-
-      <div class="section-label">
-        Projeto em destaque
-      </div>
-
-      <div class="cards">
-
-        <article class="card">
-
-          <div class="card-top">
-
-            <span class="card-name">
-              Industrial Hydraulic DataOps
-            </span>
-
-            <span class="badge">
-              projeto
-            </span>
-
-          </div>
-
-
-          <div class="card-subtitle">
-            Da telemetria bruta à informação analítica
-          </div>
-
-
-          <div class="card-desc">
-            Pipeline desenvolvido sobre dados experimentais reais
-            de um sistema hidráulico com 2.205 ciclos operacionais.
-
-            O projeto transforma sinais de pressão, potência, vazão,
-            temperatura e vibração coletados em diferentes frequências
-            em uma camada estruturada e validada para análise.
-          </div>
-
-
-          <div class="card-tags">
-
-            <span class="tag">Python</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Data Quality</span>
-            <span class="tag">Streamlit</span>
-            <span class="tag">Plotly</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Pytest</span>
-
-          </div>
-
-
-          <div class="card-actions">
-
-            <a
-              href="https://github.com/luizznelson/industrial-hydraulic-dataops"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver código →
-            </a>
-
-            <!--
-              SUBSTITUA PELO LINK REAL QUANDO O STREAMLIT ESTIVER PUBLICADO
-            -->
-
-            <a
-              href="https://industrial-hydraulic-dataops.streamlit.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Abrir dashboard →
-            </a>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
     <!-- STACK -->
 
     <div class="divider"></div>
 
-    <section>
+    <section class="section" id="stack">
 
       <div class="section-label">
         Stack & Competências
       </div>
 
+      <h2 class="section-title">
+        Ferramentas que uso para construir
+      </h2>
 
-      <div class="stack-group">
+      <div class="stack-columns">
 
-        <div class="stack-title">
-          Automação & Processos
-        </div>
+        <div class="stack-group">
 
-        <div class="stack">
+          <div class="stack-title">
+            Automação & Processos
+          </div>
 
-          <span class="stack-item">Python</span>
-          <span class="stack-item">REST APIs</span>
-          <span class="stack-item">n8n</span>
-          <span class="stack-item">BPMN</span>
-          <span class="stack-item">OAuth</span>
-          <span class="stack-item">Requirements Analysis</span>
-
-        </div>
-
-      </div>
-
-
-      <div class="stack-group">
-
-        <div class="stack-title">
-          Dados & Analytics
-        </div>
-
-        <div class="stack">
-
-          <span class="stack-item">Pandas</span>
-          <span class="stack-item">SQL</span>
-          <span class="stack-item">Power BI</span>
-          <span class="stack-item">Power Query</span>
-          <span class="stack-item">DAX</span>
-          <span class="stack-item">Excel</span>
-          <span class="stack-item">Estatística</span>
+          <div class="stack">
+            <span class="stack-item">Python</span>
+            <span class="stack-item">REST APIs</span>
+            <span class="stack-item">n8n</span>
+            <span class="stack-item">BPMN</span>
+            <span class="stack-item">OAuth</span>
+            <span class="stack-item">Requirements Analysis</span>
+          </div>
 
         </div>
 
-      </div>
 
+        <div class="stack-group">
 
-      <div class="stack-group">
+          <div class="stack-title">
+            Dados & Analytics
+          </div>
 
-        <div class="stack-title">
-          IA Aplicada
+          <div class="stack">
+            <span class="stack-item">Pandas</span>
+            <span class="stack-item">SQL</span>
+            <span class="stack-item">PostgreSQL</span>
+            <span class="stack-item">SQLite</span>
+            <span class="stack-item">Power BI</span>
+            <span class="stack-item">Power Query</span>
+            <span class="stack-item">DAX</span>
+            <span class="stack-item">Estatística</span>
+          </div>
+
         </div>
 
-        <div class="stack">
 
-          <span class="stack-item">LLMs</span>
-          <span class="stack-item">LangChain</span>
-          <span class="stack-item">LangGraph</span>
-          <span class="stack-item">RAG</span>
-          <span class="stack-item">Prompt Engineering</span>
-          <span class="stack-item">Scikit-learn</span>
+        <div class="stack-group">
+
+          <div class="stack-title">
+            IA Aplicada
+          </div>
+
+          <div class="stack">
+            <span class="stack-item">LLMs</span>
+            <span class="stack-item">LangChain</span>
+            <span class="stack-item">RAG</span>
+            <span class="stack-item">Prompt Engineering</span>
+            <span class="stack-item">Groq</span>
+            <span class="stack-item">Gemini</span>
+            <span class="stack-item">Scikit-learn</span>
+          </div>
 
         </div>
 
-      </div>
 
+        <div class="stack-group">
 
-      <div class="stack-group">
+          <div class="stack-title">
+            Engenharia
+          </div>
 
-        <div class="stack-title">
-          Engenharia
-        </div>
-
-        <div class="stack">
-
-          <span class="stack-item">Git</span>
-          <span class="stack-item">Docker</span>
-          <span class="stack-item">FastAPI</span>
-          <span class="stack-item">SQLite</span>
-          <span class="stack-item">PostgreSQL</span>
-          <span class="stack-item">Airflow</span>
-          <span class="stack-item">Pytest</span>
+          <div class="stack">
+            <span class="stack-item">Git</span>
+            <span class="stack-item">Docker</span>
+            <span class="stack-item">FastAPI</span>
+            <span class="stack-item">CI/CD</span>
+            <span class="stack-item">Pytest</span>
+            <span class="stack-item">Playwright</span>
+            <span class="stack-item">MCP</span>
+          </div>
 
         </div>
 
@@ -1059,11 +1211,15 @@
 
     <div class="divider"></div>
 
-    <section>
+    <section class="section" id="formacao">
 
       <div class="section-label">
         Formação, Docência & Pesquisa
       </div>
+
+      <h2 class="section-title">
+        Base acadêmica e investigação aplicada
+      </h2>
 
       <div class="academic">
 
@@ -1076,6 +1232,11 @@
 
           <div class="academic-meta">
             UFPI · Sistemas Distribuídos · 2025 — 2028
+          </div>
+
+          <div class="academic-desc">
+            Formação avançada com foco em sistemas distribuídos,
+            avaliação de desempenho e pesquisa aplicada.
           </div>
 
         </div>
@@ -1113,11 +1274,7 @@
           <div class="academic-desc">
             Pesquisa em sistemas distribuídos, IoT/LoRaWAN,
             redes de sensores, telemetria, modelagem e
-            avaliação de desempenho.
-
-            <strong>
-              20+ publicações científicas
-            </strong>
+            avaliação de desempenho. <strong>20+ publicações científicas</strong>
             em periódicos e conferências.
           </div>
 
